@@ -9,7 +9,7 @@
             role.innerText = person.role;
             image.src = person.img;
             image.alt = person.user;
-        }, 250);
+        }, timer / 2);
     }
 
     function change(className) {
@@ -35,7 +35,7 @@
             role.classList.remove(className);
             image.classList.remove(className);
             unlockClick = true;
-        }, 500);
+        }, timer);
     }
 
     // DOM Selectors
@@ -64,6 +64,7 @@
     // Support Variables
     let displayed = 'tanya';
     let unlockClick = true;
+    const timer = 500;
 
     // Events
     btnPrev.addEventListener('click', () => {
