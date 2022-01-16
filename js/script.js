@@ -2,7 +2,7 @@
 (() => {
     // Functions
     function configure(person, className) {
-        removeClass(className);
+        setTimeout(removeClass, timer, className);
         setTimeout(() => {
             review.innerText = person.review;
             user.innerText = person.user;
@@ -29,13 +29,11 @@
     }
 
     function removeClass(className) {
-        setTimeout(() => {
-            review.classList.remove(className);
-            user.classList.remove(className);
-            role.classList.remove(className);
-            image.classList.remove(className);
-            unlockClick = true;
-        }, timer);
+        review.classList.remove(className);
+        user.classList.remove(className);
+        role.classList.remove(className);
+        image.classList.remove(className);
+        unlockButton = true;
     }
 
     // DOM Selectors
@@ -63,21 +61,21 @@
 
     // Support Variables
     let displayed = 'tanya';
-    let unlockClick = true;
+    let unlockButton = true;
     const timer = 500;
 
     // Events
     btnPrev.addEventListener('click', () => {
-        if (unlockClick) {
-            unlockClick = false;
+        if (unlockButton) {
+            unlockButton = false;
             addClass('slide-left');
             change('slide-left');
         }
     });
 
     btnNext.addEventListener('click', () => {
-        if (unlockClick) {
-            unlockClick = false;
+        if (unlockButton) {
+            unlockButton = false;
             addClass('slide-right');
             change('slide-right');
         }
