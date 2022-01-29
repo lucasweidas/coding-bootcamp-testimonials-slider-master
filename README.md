@@ -32,6 +32,7 @@ This is a solution to the [Coding bootcamp testimonials slider challenge on Fron
 - Mobile-first workflow
 - Pure JavaScript
 
+
 ## Author
 
 - Github - [@lucasweidas](https://github.com/LucasWeidas)
